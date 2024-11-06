@@ -1,0 +1,5 @@
+# https://github.com/abbysovich/QuantumComputingPractice/blob/21146e502fb5981daf6fb615c48fca13e9065054/practice.py
+import qiskit
+from qiskit import IBMQ
+IBMQ.save_account('18b0689cff758ba84ee019f44bfcb11e4721ff0be5bce16b73e246637bf82a5b8e9c7bf189e8b06229622d1774a372a5df841714d8836e4e971d3b24fe7a381b')
+IBMQ.load_account()

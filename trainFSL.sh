@@ -1,0 +1,21 @@
+python main_fsl.py \
+    --tokenizer_name=./pretrained_models/codebert_base \
+    --model_name_or_path=./pretrained_models/codebert_base \
+    --do_train \
+    --do_test \
+    --num_train_epochs 20 \
+    --block_size 256 \
+    --early_stopping_patience 4\
+    --min_delta 1e-5\
+    --learning_rate 6e-5 \
+    --weight_decay 5e-7 \
+    --scheduler_gamma 0.1 \
+    --max_grad_norm 1.0 \
+    --n_way 2 \
+    --n_shot 7 \
+    --n_query 1 \
+    --n_tasks_per_epoch 200 \
+    --n_valid_per_epoch 200 \
+    --num_folds 4 \
+    --num_times 10 \
+    --seed 0  2>&1 | tee train.log
